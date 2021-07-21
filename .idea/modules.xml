@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/igaev-ligabank.iml" filepath="$PROJECT_DIR$/.idea/igaev-ligabank.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../примеры грейдирования/liga-bank-master/.idea/liga-bank-master.iml" filepath="$PROJECT_DIR$/../примеры грейдирования/liga-bank-master/.idea/liga-bank-master.iml" />
     </modules>
   </component>
 </project>

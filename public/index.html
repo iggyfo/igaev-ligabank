@@ -1,43 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <meta charset="utf-8">
+    <base href="/">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LigaBank</title>
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+    <header class="page-header">
+      <div class="page-header__container  container--header">
+        <a href="#" class="page-header__logo">
+          <img src="img/logo@2x.svg" alt="Логотип" width="155">
+        </a>
+        <ul class="page-header__nav nav">
+          <li class="nav__item"><a href="#">Услуги</a></li>
+          <li class="nav__item"><a href="#">Рассчитать кредит</a></li>
+          <li class="nav__item"><a href="#">Контакты</a></li>
+          <li class="nav__item"><a href="#">Задать вопрос</a></li>
+        </ul>
+        <button class="page-header__login">Войти в Интернет-банк</button>
+      </div>
+    </header>
+
+    <main>
+
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__container container container--footer">
+        <div class="page-footer__logo-block">
+          <a href="#" class="page-header__logo">
+            <img src="img/logo@2x.svg" alt="Логотип" width="155">
+          </a>
+          <address>
+            150015, г. Москва, ул. Московская, д. 32 Генеральная лицензия Банка
+            России №1050 Ⓒ Лига Банк, 2019
+          </address>
+        </div>
+        <ul class="page-footer__nav nav nav--footer">
+          <li class="nav__item"><a href="#">Услуги</a></li>
+          <li class="nav__item"><a href="#">Рассчитать кредит</a></li>
+          <li class="nav__item"><a href="#">Контакты</a></li>
+          <li class="nav__item"><a href="#">Задать вопрос</a></li>
+        </ul>
+        <p class="page-footer__phone page-footer__phone--mob">
+          <a href="tel:0904">*0904</a>
+          Бесплатно для абонентов МТС, Билайн, Мегафон, Теле2
+        </p>
+        <p class="page-footer__phone page-footer__phone--city">
+          <a href="tel:88001112233">8 800 111 22 33</a>
+          Бесплатный для всех городов России
+        </p>
+        <ul class="page-header__social social">
+          <li class="social__item social__item--fb">
+            <a href="#" aria-label="facebook"></a>
+          </li>
+          <li class="social__item social__item--inst">
+            <a href="#" aria-label="instagram"></a>
+          </li>
+          <li class="social__item social__item--tw">
+            <a href="#" aria-label="twitter"></a>
+          </li>
+          <li class="social__item social__item--youtube">
+            <a href="#" aria-label="youtube"></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <script src="./bundle.js"></script>
   </body>
 </html>
