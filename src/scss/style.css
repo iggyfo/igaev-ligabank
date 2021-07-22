@@ -362,6 +362,7 @@ template {
 body {
   margin: 0;
   font-family: "Roboto", "Arial", sans-serif;
+  color: #1F1E25;
   min-width: 1366px;
   position: relative;
 }
@@ -450,6 +451,107 @@ html {
 }
 .nav__item--active {
   color: #2C36F2;
+}
+
+.main {
+  color: lightgrey;
+  height: 50px;
+}
+
+.footer {
+  padding: 50px 98px;
+  background-color: #F6F7FF;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer__about {
+  width: 260px;
+}
+.footer__about address {
+  margin-top: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 140%;
+  color: #707C87;
+}
+
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.footer__nav .nav__item {
+  padding-bottom: 20px;
+  padding-right: 0;
+  font-weight: 500;
+}
+.footer__nav .nav__item:last-child {
+  padding-bottom: 0;
+}
+
+.footer__phone {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 140%;
+  padding-left: 35px;
+  color: #707C87;
+  background-repeat: no-repeat;
+  margin-top: 10px;
+}
+.footer__phone a {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  display: block;
+  color: #1F1E25;
+}
+.footer__phone--short {
+  background-image: url("../../img/mob-phone-icon.svg");
+  background-position: left 10px top 2px;
+  width: 205px;
+}
+.footer__phone--number {
+  background-image: url("../../img/phone-icon.svg");
+  background-position: left top 2px;
+  width: 165px;
+}
+
+.social {
+  display: flex;
+  padding-top: 10px;
+}
+
+.social__item {
+  margin-right: 15px;
+}
+.social__item:last-child {
+  margin-right: 0;
+}
+.social__item a::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: no-repeat center;
+}
+.social__item--fb a::before {
+  background-image: url("../../img/facebook-icon.svg");
+}
+.social__item--inst a::before {
+  background-image: url("../../img/instagram-icon.svg");
+}
+.social__item--tw a::before {
+  background-image: url("../../img/twitter-icon.svg");
+}
+.social__item--youtube a::before {
+  background-image: url("../../img/youtube-icon.svg");
 }
 
 /*# sourceMappingURL=style.css.map */
