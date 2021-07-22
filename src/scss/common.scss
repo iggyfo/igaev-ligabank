@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: $roboto;
-  min-width: 320px;
+  min-width: 1366px;
   position: relative;
 }
 
@@ -40,4 +40,10 @@ html {
   white-space: nowrap;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
 }

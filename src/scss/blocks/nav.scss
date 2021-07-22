@@ -1,0 +1,7 @@
+.nav__item {
+  padding-right: 25px;
+
+  &--active {
+    color: $blue-active-link;
+  }
+}

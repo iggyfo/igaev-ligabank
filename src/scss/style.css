@@ -362,7 +362,7 @@ template {
 body {
   margin: 0;
   font-family: "Roboto", "Arial", sans-serif;
-  min-width: 320px;
+  min-width: 1366px;
   position: relative;
 }
 
@@ -401,6 +401,55 @@ html {
   white-space: nowrap;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
+.header {
+  min-height: 91px;
+  background-color: #F6F7FF;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 27px 98px 39px 98px;
+}
+
+.header__container {
+  display: flex;
+  align-items: flex-end;
+}
+
+.header__logo {
+  margin-right: 58px;
+  height: 28px;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: flex-start;
+  margin-right: auto;
+}
+
+.header__login {
+  background-color: inherit;
+  border: none;
+}
+.header__login:focus {
+  outline: none;
+}
+
+.header__auth {
+  display: flex;
+}
+
+.nav__item {
+  padding-right: 25px;
+}
+.nav__item--active {
+  color: #2C36F2;
 }
 
 /*# sourceMappingURL=style.css.map */

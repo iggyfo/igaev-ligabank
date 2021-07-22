@@ -1,0 +1,39 @@
+.header {
+  min-height: 91px;
+  background-color: $white-header;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 27px 98px 39px 98px;
+}
+
+
+.header__container {
+  display: flex;
+  align-items: flex-end;
+}
+
+.header__logo {
+  margin-right: 58px;
+  height: 28px;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: flex-start;
+  margin-right: auto;
+}
+
+.header__login {
+  background-color: inherit;
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.header__auth {
+  display: flex;
+}
+
+
