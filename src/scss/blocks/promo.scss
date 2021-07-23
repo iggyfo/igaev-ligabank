@@ -1,0 +1,54 @@
+.promo {
+  display: flex;
+  justify-content: flex-start;
+  background-image: url("../../img/promo.jpg");
+  height: 400px;
+  color: $white-header;
+  padding: 115px 98px 115px 268px;
+}
+
+.promo__title {
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 63px;
+}
+
+.promo__tagline {
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.promo__link {
+  display: block;
+  width: 234px;
+  height: 53px;
+  background: $white-header;
+  border-radius: 4px;
+  color: $black-text;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  padding: 17px 36px;
+}
+
+.promo__cards {
+  &--black {
+    position: absolute;
+    top: 229px;
+    right: 356px;
+    z-index: 1;
+    filter: drop-shadow(0px 4px 23px rgba(25, 26, 31, 0.2));
+  }
+  &--white {
+    position: absolute;
+    top: 171px;
+    right: 247px;
+    z-index: 0;
+    filter: drop-shadow(0px 4px 23px rgba(25, 26, 31, 0.2));
+  }
+
+}
