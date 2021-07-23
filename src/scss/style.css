@@ -446,6 +446,13 @@ html {
   display: flex;
 }
 
+.button-prm {
+  background-color: #2C36F2;
+  color: #F6F7FF;
+  border-radius: 4px;
+  border: 0;
+}
+
 .nav__item {
   padding-right: 25px;
 }
@@ -676,39 +683,48 @@ html {
   margin-bottom: 85px;
   margin-left: auto;
   grid-column: 3;
-  background-color: #2C36F2;
-  color: #F6F7FF;
-  border-radius: 4px;
-  border: 0;
 }
 
 .history {
-  margin: 0 98px;
-  min-height: 477px;
+  margin: 0 98px 110px;
+  padding: 0 70px;
   background: #F6F7FF;
   border-radius: 0px 4px 4px 4px;
 }
 
 .history__title {
   margin: 0;
-  padding: 40px 0 50px 70px;
+  padding: 40px 0 50px 0;
   font-weight: 500;
   font-size: 28px;
   line-height: 140%;
 }
 
 .history__list {
-  column-count: 2;
-  padding-left: 70px;
-  padding-right: 123px;
+  display: grid;
+  position: relative;
+  grid-template-columns: 1fr 1fr;
   min-width: 392px;
   height: 233px;
-  margin-bottom: 18px;
+  margin-bottom: 50px;
+}
+.history__list::before {
+  content: "";
+  position: absolute;
+  background: #C1C2CA;
+  top: -30px;
+  left: 515px;
+  width: 1px;
+  height: 289px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .history__item {
   display: flex;
   margin-bottom: 33px;
+}
+.history__item:nth-child(2n) {
+  justify-content: flex-end;
 }
 
 .history__item-date {
@@ -721,6 +737,12 @@ html {
 
 .history__item-currency {
   margin-left: 13px;
+}
+
+.history__clear {
+  width: 198px;
+  height: 51px;
+  margin-bottom: 39px;
 }
 
 /*# sourceMappingURL=style.css.map */
