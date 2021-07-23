@@ -43,6 +43,147 @@
             <img class="promo__cards--white" src="./img/white-card.png" alt="Кредитная карта белого цвета">
           </div>
         </section>
+        <section class="converter">
+          <h2 class="converter__title">Конвертер валют</h2>
+          <form action="" class="form" method="get">
+            <div class="form__input-container">
+              <label for="amount-have" aria-label="Средства которые есть">У меня есть</label>
+              <div class="form__input">
+                <input class="form__amount" id="amount-have" type="text" name="amount-have">
+                <select class="form__select" name="currency">
+                  <option value="RUB">RUB</option>
+                  <option value="USD">USD</option>
+                  <option value="EUR">EUR</option>
+                  <option value="GBR">GBR</option>
+                  <option value="CNY">CNY</option>
+                </select>
+              </div>
+            </div>
+            <div class="form__arrows">
+              <svg width="56" height="36" viewBox="0 0 56 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 1L3 9L19 17" stroke="#1F1E25" stroke-width="2"/>
+                <path d="M3 9C9.66667 9 33.3241 9 44.6667 9L53 9" stroke="#1F1E25" stroke-width="2"/>
+                <path d="M37 35L53 27L37 19" stroke="#1F1E25" stroke-width="2"/>
+                <path d="M53 27C46.3333 27 22.6759 27 11.3333 27H3" stroke="#1F1E25" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="form__input-container">
+              <label for="amount-want" aria-label="Средства которые хочу приобрести">Хочу приобрести</label>
+              <div class="form__input">
+                <input class="form__amount" id="amount-want" type="text" name="amount-want">
+                <select class="form__select" name="currency">
+                  <option value="RUB">RUB</option>
+                  <option value="USD">USD</option>
+                  <option value="EUR">EUR</option>
+                  <option value="GBR">GBR</option>
+                  <option value="CNY">CNY</option>
+                </select>
+              </div>
+            </div>
+            <div class="form__input-container">
+              <div class="form__input">
+                <input class="form__amount" id="calendar" type="text" name="calendar">
+                <span class="form__amount--calendar"></span>
+              </div>
+            </div>
+            <button class="form__submit" type="submit">Сохранить результат</button>
+          </form>
+        </section>
+        <section class="history">
+          <h3 class="history__title">История конвертация</h3>
+          <ul class="history__list">
+            <li class="history__item">
+              <time class="history__item-date" datetime="2020-11-25">25.11.2020</time>
+              <span class="history__item-amount">1000 RUB</span>
+              <svg width="41" height="18" viewBox="0 0 41 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M27.2 17L40 9L27.2 1" stroke="#1F1E25"/>
+                <path d="M40 9C34.6667 9 15.7407 9 6.66667 9H0" stroke="#1F1E25"/>
+              </svg>
+              <span class="history__item-currency">13,1234 USD</span>
+              </li>
+            <li class="history__item">
+              <time class="history__item-date" datetime="2020-11-25">25.11.2020</time>
+              <span class="history__item-amount">1000 RUB</span>
+              <svg width="41" height="18" viewBox="0 0 41 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M27.2 17L40 9L27.2 1" stroke="#1F1E25"/>
+                <path d="M40 9C34.6667 9 15.7407 9 6.66667 9H0" stroke="#1F1E25"/>
+              </svg>
+              <span class="history__item-currency">13,1234 USD</span>
+              </li>
+            <li class="history__item">
+              <time class="history__item-date" datetime="2020-11-25">25.11.2020</time>
+              <span class="history__item-amount">1000 RUB</span>
+              <svg width="41" height="18" viewBox="0 0 41 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M27.2 17L40 9L27.2 1" stroke="#1F1E25"/>
+                <path d="M40 9C34.6667 9 15.7407 9 6.66667 9H0" stroke="#1F1E25"/>
+              </svg>
+              <span class="history__item-currency">13,1234 USD</span>
+            </li>
+            <li class="history__item">
+              <time class="history__item-date" datetime="2020-11-25">25.11.2020</time>
+              <span class="history__item-amount">1000 RUB</span>
+              <svg width="41" height="18" viewBox="0 0 41 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M27.2 17L40 9L27.2 1" stroke="#1F1E25"/>
+                <path d="M40 9C34.6667 9 15.7407 9 6.66667 9H0" stroke="#1F1E25"/>
+              </svg>
+              <span class="history__item-currency">13,1234 USD</span>
+            </li>
+            <li class="history__item">
+              <time class="history__item-date" datetime="2020-11-25">25.11.2020</time>
+              <span class="history__item-amount">1000 RUB</span>
+              <svg width="41" height="18" viewBox="0 0 41 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M27.2 17L40 9L27.2 1" stroke="#1F1E25"/>
+                <path d="M40 9C34.6667 9 15.7407 9 6.66667 9H0" stroke="#1F1E25"/>
+              </svg>
+              <span class="history__item-currency">13,1234 USD</span>
+            </li>
+            <li class="history__item">
+              <time class="history__item-date" datetime="2020-11-25">25.11.2020</time>
+              <span class="history__item-amount">1000 RUB</span>
+              <svg width="41" height="18" viewBox="0 0 41 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M27.2 17L40 9L27.2 1" stroke="#1F1E25"/>
+                <path d="M40 9C34.6667 9 15.7407 9 6.66667 9H0" stroke="#1F1E25"/>
+              </svg>
+              <span class="history__item-currency">13,1234 USD</span>
+            </li>
+            <li class="history__item">
+              <time class="history__item-date" datetime="2020-11-25">25.11.2020</time>
+              <span class="history__item-amount">1000 RUB</span>
+              <svg width="41" height="18" viewBox="0 0 41 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M27.2 17L40 9L27.2 1" stroke="#1F1E25"/>
+                <path d="M40 9C34.6667 9 15.7407 9 6.66667 9H0" stroke="#1F1E25"/>
+              </svg>
+              <span class="history__item-currency">13,1234 USD</span>
+            </li>
+            <li class="history__item">
+              <time class="history__item-date" datetime="2020-11-25">25.11.2020</time>
+              <span class="history__item-amount">1000 RUB</span>
+              <svg width="41" height="18" viewBox="0 0 41 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M27.2 17L40 9L27.2 1" stroke="#1F1E25"/>
+                <path d="M40 9C34.6667 9 15.7407 9 6.66667 9H0" stroke="#1F1E25"/>
+              </svg>
+              <span class="history__item-currency">13,1234 USD</span>
+            </li>
+            <li class="history__item">
+              <time class="history__item-date" datetime="2020-11-25">25.11.2020</time>
+              <span class="history__item-amount">1000 RUB</span>
+              <svg width="41" height="18" viewBox="0 0 41 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M27.2 17L40 9L27.2 1" stroke="#1F1E25"/>
+                <path d="M40 9C34.6667 9 15.7407 9 6.66667 9H0" stroke="#1F1E25"/>
+              </svg>
+              <span class="history__item-currency">13,1234 USD</span>
+            </li>
+            <li class="history__item">
+              <time class="history__item-date" datetime="2020-11-25">25.11.2020</time>
+              <span class="history__item-amount">1000 RUB</span>
+              <svg width="41" height="18" viewBox="0 0 41 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M27.2 17L40 9L27.2 1" stroke="#1F1E25"/>
+                <path d="M40 9C34.6667 9 15.7407 9 6.66667 9H0" stroke="#1F1E25"/>
+              </svg>
+              <span class="history__item-currency">13,1234 USD</span>
+            </li>
+          </ul>
+        </section>
       </main>
       <footer class="footer">
         <div class="footer__container">
