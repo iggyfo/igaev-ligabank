@@ -1,0 +1,26 @@
+const CURRENCY_PAIRS = [
+    `RUBUSD`,
+    `RUBEUR`,
+    `RUBGBP`,
+    `RUBCNY`,
+    `USDRUB`,
+    `USDEUR`,
+    `USDGBP`,
+    `USDCNY`,
+    `EURRUB`,
+    `EURUSD`,
+    `EURGBP`,
+    `EURCNY`,
+    `GBPRUB`,
+    `GBPUSD`,
+    `GBPEUR`,
+    `GBPCNY`,
+    `CNYRUB`,
+    `CNYUSD`,
+    `CNYEUR`,
+    `CNYGBP`,
+];
+
+const URL = `https://currate.ru/api/?get=rates&pairs=${CURRENCY_PAIRS.toString()}&key=1b6e8651521c0793ddd73b4cd8708552`;
+
+const RESPONSE = {"RUBUSD":"0.0155806","RUBEUR":"0.0144437","RUBGBP":"0.0120952","RUBCNY":"0.109432","USDRUB":"64.1824","USDEUR":"0.92674","USDGBP":"0.7763","USDCNY":"7.0236","EURRUB":"69.244","EURUSD":"1.07905","EURGBP":"0.83767","EURCNY":"7.57885","GBPRUB":"82.6773","GBPUSD":"1.28841","GBPEUR":"1.19402","CNYRUB":"9.13811","CNYUSD":"0.142377","CNYEUR":"0.131947"}
