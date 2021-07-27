@@ -5,7 +5,7 @@ const ConversionOperation = ({conversationDate}) => {
 
     const {date, amountHave, currencyHave, amountWant, currencyWant} = conversationDate;
     const dateParse = dayjs(date).format(`DD.MM.YYYY`)
-    debugger
+
     return (
         <li className="history__item">
             <time className="history__item-date" dateTime="2020-11-25">{dateParse}</time>

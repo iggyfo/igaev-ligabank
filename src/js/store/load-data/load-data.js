@@ -1,5 +1,5 @@
 import {createReducer} from "@reduxjs/toolkit";
-import {loadQuotes, conversationDate} from '../action';
+import {loadQuotes, conversationDate, clearConversationDate} from '../action';
 
 
 const initialState = {
@@ -12,7 +12,10 @@ const loadData = createReducer(initialState, (builder) => {
     state.quotes = action.payload;
   });
   builder.addCase(conversationDate, (state, action) => {
-    state.conversationDate.push(action.payload);
+      state.conversationDate.push(action.payload);
+  });
+  builder.addCase(clearConversationDate, (state, action) => {
+      state.conversationDate = [];
   });
 });
 

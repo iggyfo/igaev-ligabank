@@ -1,9 +1,15 @@
 import React from "react";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import ConversionOperation from "./conversion-operation";
+import {clearConversationDate} from "../store/action";
 
 const History = () => {
     const {conversationDate} = useSelector((state) => state.DATA);
+    const dispatch = useDispatch();
+
+    const handleClearHistory = () => {
+        dispatch(clearConversationDate({}));
+    }
 
     return (
         <section className="history">
@@ -15,7 +21,7 @@ const History = () => {
                         conversationDate={conversationDate}
                     />)}
             </ul>
-            <button className="history__clear button-prm">Очистить историю</button>
+            <button className="history__clear button-prm" onClick={handleClearHistory}>Очистить историю</button>
         </section>
     )
 }
