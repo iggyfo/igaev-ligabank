@@ -28,7 +28,7 @@ const Converter = () => {
             // dispatch(fetchQuotes());
             dispatch(loadQuotes(RESPONSE))
         }
-    }, [quotes]);
+    }); //при запросе с сервера - [quotes]
 
     if (quotes === null) {
         return (
