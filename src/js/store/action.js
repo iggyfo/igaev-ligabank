@@ -2,31 +2,23 @@ import {createAction} from '@reduxjs/toolkit';
 
 
 export const ActionType = {
-  LOAD_QUOTES: `data/loadQuotes`,
-  AMOUNT_HAVE: `data/amountHave`,
-  CURRENCY_HAVE: `data/currencyHave`
+    LOAD_QUOTES: `data/loadQuotes`,
+    CONVERSATION_DATA: `data/conversationDate`,
 };
 
 const loadQuotes = createAction(ActionType.LOAD_QUOTES, (quotes) => {
-  return {
-    payload: quotes,
-  };
+    return {
+        payload: quotes,
+    };
 });
 
-const saveAmountHave = createAction(ActionType.AMOUNT_HAVE, (amount) => {
-  return {
-    payload: amount,
-  };
-});
-
-const saveCurrencyHave = createAction(ActionType.CURRENCY_HAVE, (currency) => {
-  return {
-    payload: currency,
-  };
+const conversationDate = createAction(ActionType.CONVERSATION_DATA, (data) => {
+    return {
+        payload: data
+    };
 });
 
 export {
-  loadQuotes,
-  saveAmountHave,
-  saveCurrencyHave,
+    loadQuotes,
+    conversationDate,
 };

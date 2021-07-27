@@ -1,15 +1,16 @@
 import React, {useRef, useEffect, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {saveAmountHave, saveCurrencyHave, loadQuotes} from "../store/action";
+import {conversationDate, loadQuotes} from "../store/action";
 // import {fetchQuotes} from "../store/api-actions";
 import {RESPONSE} from "../mock/mock";
 import LoadingScreen from "./loading-screen";
 import dayjs from "dayjs";
+import {nanoid} from "@reduxjs/toolkit";
 
 
 const Converter = () => {
-    const EQUAL_QUOTES = 1;
-    const INPUT_HAVE_NAME = "amount_have";
+    const AMOUNT_HAVE_NAME = "amount-have";
+    const CURRENCY_HAVE_NAME = "currency-have";
 
     const {quotes} = useSelector((state) => state.DATA);
     const [amountHave, setAmountHave] = useState(null);
@@ -21,8 +22,6 @@ const Converter = () => {
     const formRef = useRef();
     const amountHaveRef = useRef();
     const amountWantRef = useRef();
-
-    console.log(dayjs().format('YYYY-MM-DDTHH:mm:ss'))
 
     useEffect(() => {
         if (!quotes) {
@@ -37,56 +36,53 @@ const Converter = () => {
         );
     }
 
-    const getCurrentQuotes = () => {
-        if (currencyHave !== currencyWant) {
-            return currencyHave + currencyWant;
-        } else {
-            return EQUAL_QUOTES;
-        }
-    }
-
-    const handleAmountHaveInput = (evt) => {
-        const currentQuotes = getCurrentQuotes();
-        debugger
-        if (evt.target.name === INPUT_HAVE_NAME) {
-            currentQuotes === EQUAL_QUOTES
+    const handleAmountInput = (evt) => {
+        if (evt.target.name === AMOUNT_HAVE_NAME) {
+            currencyHave === currencyWant
                 ? amountWantRef.current.value = evt.target.value
-                : amountWantRef.current.value = evt.target.value * RESPONSE[currentQuotes]
-
+                : amountWantRef.current.value = (evt.target.value * RESPONSE[currencyHave + currencyWant]).toFixed(3);
             setAmountHave(evt.target.value);
+            setAmountWant(amountWantRef.current.value);
+        } else {
+            currencyHave === currencyWant
+                ? amountHaveRef.current.value = evt.target.value
+                : amountHaveRef.current.value = (evt.target.value * RESPONSE[currencyWant + currencyHave]).toFixed(3);
+            setAmountWant(evt.target.value);
+            setAmountHave(amountHaveRef.current.value);
         }
-        currentQuotes === EQUAL_QUOTES
-        ? amountWantRef.current.value = evt.target.value
-        : amountWantRef.current.value = evt.target.value * RESPONSE[currentQuotes]
-
-        setAmountHave(evt.target.value);
     };
 
-    const handleAmountWantInput = (evt) => {
-        const currentQuotes = currencyWant + currencyHave
-        amountHaveRef.current.value = evt.target.value * RESPONSE[currentQuotes]
-        setAmountWant(evt.target.value)
-        console.log(amountWant)
-
-    };
-
-    const handleCurrencyHaveInput = (evt) => {
-        setCurrencyHave(evt.target.value)
-        console.log(currencyHave)
-    }
-
-    const handleCurrencyWantInput = (evt) => {
-        setCurrencyWant(evt.target.value)
-        console.log(currencyHave)
+    const handleCurrencyInput = (evt) => {
+        if (evt.target.name === CURRENCY_HAVE_NAME) {
+            setCurrencyHave(evt.target.value);
+            currencyWant === evt.target.value
+                ? amountHaveRef.current.value = amountWant
+                : amountHaveRef.current.value = (Number(amountWant) * RESPONSE[currencyWant + evt.target.value]).toFixed(3)
+            setAmountHave(amountHaveRef.current.value);
+        } else {
+            setCurrencyWant(evt.target.value);
+            currencyHave === evt.target.value
+                ? amountWantRef.current.value = amountHave
+                : amountWantRef.current.value = (Number(amountHave) * RESPONSE[currencyHave + evt.target.value]).toFixed(3)
+            console.log(Number(amountHave))
+            console.log(RESPONSE[evt.target.value + currencyHave])
+            setAmountWant(amountWantRef.current.value);
+        }
     }
 
     const handleConversionSubmit = (evt) => {
         evt.preventDefault();
+        const date = dayjs().format('YYYY-MM-DDTHH:mm:ss');
+        const id = nanoid();
+        dispatch(conversationDate({
+            id,
+            date,
+            amountHave,
+            currencyHave,
+            amountWant,
+            currencyWant
+        }));
         formRef.current.reset();
-        // dispatch(saveAmountHave());
-        // dispatch(saveAmountHave());
-        // dispatch(saveCurrencyHave(evt.target.value))
-        // dispatch(saveCurrencyHave(evt.target.value))
     };
 
     return (
@@ -101,14 +97,14 @@ const Converter = () => {
                             id="amount-have"
                             type="text"
                             name="amount-have"
-                            onInput={handleAmountHaveInput}
+                            onInput={handleAmountInput}
                             ref={amountHaveRef}
                         />
-                        <select className="form__select" name="currency" onChange={handleCurrencyHaveInput}>
+                        <select className="form__select" name="currency-have" onChange={handleCurrencyInput}>
                             <option value="RUB">RUB</option>
                             <option value="USD">USD</option>
                             <option value="EUR">EUR</option>
-                            <option value="GBR">GBR</option>
+                            <option value="GBP">GBP</option>
                             <option value="CNY">CNY</option>
                         </select>
                     </div>
@@ -130,14 +126,14 @@ const Converter = () => {
                             id="amount-want"
                             type="text"
                             name="amount-want"
-                            onInput={handleAmountWantInput}
+                            onInput={handleAmountInput}
                             ref={amountWantRef}
                         />
-                        <select className="form__select" name="currency" value={"USD"} onChange={handleCurrencyWantInput}>
+                        <select className="form__select" name="currency-want" defaultValue={"USD"} onChange={handleCurrencyInput}>
                             <option value="RUB">RUB</option>
                             <option value="USD">USD</option>
                             <option value="EUR">EUR</option>
-                            <option value="GBR">GBR</option>
+                            <option value="GBP">GBP</option>
                             <option value="CNY">CNY</option>
                         </select>
                     </div>
