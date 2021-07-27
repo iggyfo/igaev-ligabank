@@ -1,7 +1,8 @@
 import React, {useRef, useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {saveAmountHave, saveCurrencyHave} from "../store/action";
+import {saveAmountHave, saveCurrencyHave, loadQuotes} from "../store/action";
 import {fetchQuotes} from "../store/api-actions";
+import {RESPONSE} from "../mock/mock";
 import LoadingScreen from "./loading-screen";
 import dayjs from "dayjs";
 
@@ -16,7 +17,8 @@ const Converter = () => {
 
     useEffect(() => {
         if (!quotes) {
-            dispatch(fetchQuotes());
+            // dispatch(fetchQuotes());
+            dispatch(loadQuotes(RESPONSE))
         }
     }, [quotes]);
 
