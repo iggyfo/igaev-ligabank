@@ -64,8 +64,6 @@ const Converter = () => {
             currencyHave === evt.target.value
                 ? amountWantRef.current.value = amountHave
                 : amountWantRef.current.value = (Number(amountHave) * RESPONSE[currencyHave + evt.target.value]).toFixed(3)
-            console.log(Number(amountHave))
-            console.log(RESPONSE[evt.target.value + currencyHave])
             setAmountWant(amountWantRef.current.value);
         }
     }
