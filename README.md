@@ -4,4 +4,4 @@
 
 Проект выполнен на базе фреймворка React.
 
-GH-pages: -
+Versel: https://igaev-ligabank.vercel.app
